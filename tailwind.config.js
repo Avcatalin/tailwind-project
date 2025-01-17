@@ -17,14 +17,21 @@ module.exports = {
         jost: ["Jost", "sans-serif"],
       },
       colors: {
-        thinkCellLightGray: "#f8f8f8",
-        thinkCellGreen: "#378F53",
-        thinkCellDark: "#231F20",
-        thinkCellGreenRing: "#378F53",
-        thinkCellGreenBorder: "#378F53",
+        green: {
+          850: "#378F53",
+        },
+        neutral: {
+          150: "#f8f8f8",
+        },
+        slate: {
+          1000: "#231F20",
+        },
       },
       letterSpacing: {
         thinkCellLetterSpacing: "0.16px",
+      },
+      backgroundSize: {
+        w60: "60%",
       },
     },
   },

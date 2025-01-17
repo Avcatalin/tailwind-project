@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web project</title>
+    <title>Think-cell</title>
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,13 @@
     <link href="./css/output.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <!-- begin Header -->
     <header class="mb-8 lg:mb-14">
       <div class="container">
         <!-- Top navigation -->
-        <div class="flex items-center justify-between py-3 px-8 my-3 lg:my-8">
+        <div
+          class="flex items-center justify-between px-5 lg:px-8 py-3 my-3 lg:my-8"
+        >
           <a href="/" aria-label="Think-Cell homepage">
             <img
               src="/assets/think-cell-logo.svg"
@@ -26,13 +29,14 @@
               loading="lazy"
             />
           </a>
+          <!-- Language / Search / Register -->
           <nav aria-label="Top utility navigation">
             <ul class="flex items-center list-none gap-x-4 lg:gap-x-8">
               <!-- Language switcher -->
-              <li class="relative group hover:text-thinkCellGreen">
+              <li class="relative group hover:text-green-850">
                 <!-- Dropdown Trigger -->
                 <a
-                  href="#"
+                  href="javascript:void(0);"
                   class="flex items-center gap-x-1 lg:gap-x-2 transition-all duration-300 ease-in-out"
                   aria-haspopup="true"
                   aria-expanded="false"
@@ -60,36 +64,40 @@
                 </a>
 
                 <!-- Dropdown Menu -->
-                <div
-                  class="absolute top-full right-auto left-0 lg:right-[-5px] mt-0 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block"
+                <nav
+                  class="absolute top-full right-0 left-auto lg:right-[-5px] mt-0 w-32 z-20 rounded-md shadow-lg bg-white ring-1 ring-slate-1000 ring-opacity-5 hidden group-hover:block"
                   id="language-dropdown"
                   role="menu"
                 >
-                  <div class="py-2">
-                    <a
-                      href="#"
-                      class="block px-4 py-2 text-sm text-thinkCellDark hover:bg-thinkCellLightGray"
-                      role="menuitem"
-                      data-language="English"
-                      >English</a
-                    >
-                    <a
-                      href="#"
-                      class="block px-4 py-2 text-sm text-thinkCellDark hover:bg-thinkCellLightGray"
-                      role="menuitem"
-                      data-language="Deutsch"
-                      >Deutsch</a
-                    >
-                  </div>
-                </div>
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="block px-4 py-2 text-sm text-slate-1000 hover:bg-neutral-150 hover:text-green-850"
+                        role="menuitem"
+                        data-language="English"
+                        >English</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="block px-4 py-2 text-sm text-slate-1000 hover:bg-neutral-150 hover:text-green-850"
+                        role="menuitem"
+                        data-language="Deutsch"
+                        >Deutsch</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
               </li>
 
               <!-- Search trigger -->
               <li
-                class="relative before:content-[''] before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
+                class="relative before:content-[''] before:absolute before:-left-2 lg:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
               >
                 <a
-                  href="#"
+                  href="javascript:void(0);"
                   class="flex items-center gap-x-0 lg:gap-x-2"
                   aria-label="Search"
                   id="search-trigger"
@@ -100,7 +108,7 @@
                     loading="lazy"
                   />
                   <span
-                    class="hidden lg:block font-medium text-xl tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-thinkCellGreen"
+                    class="hidden lg:block font-medium text-xl tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-green-850"
                     >Suche</span
                   >
                   <span
@@ -117,22 +125,22 @@
                 <form
                   action="/search"
                   method="GET"
-                  class="absolute top-[-3px] right-0 w-32 transition-all duration-300 ease-in-out opacity-0 invisible"
+                  class="absolute -top-1 right-0 w-32 transition-all duration-300 ease-in-out opacity-0 invisible"
                   id="search-form"
                 >
                   <!-- Search Input -->
                   <input
                     type="text"
-                    name="q"
+                    name="search"
                     placeholder="Suche..."
-                    class="w-full pl-2 pr-4 py-1 border border-gray-300 rounded-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:border-thinkCellGreenBorder focus:ring-thinkCellGreenRing"
+                    class="w-full pl-2 pr-4 py-1 border border-gray-300 rounded-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:border-green-850 focus:ring-green-850"
                     aria-label="Search"
                   />
                   <!-- Close Button -->
                   <button
                     type="button"
                     id="closeFormButton"
-                    class="absolute text-xs right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-thinkCellGreen"
+                    class="absolute text-xs right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-green-850"
                     aria-label="Close search form"
                   >
                     ✕
@@ -142,11 +150,11 @@
 
               <!-- Register cta -->
               <li
-                class="relative before:content-[''] before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
+                class="relative before:content-[''] before:absolute before:-left-2 lg:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
               >
                 <a
-                  href="#"
-                  class="flex items-center gap-x-2 transition-all duration-300 ease-in-out hover:text-thinkCellGreen"
+                  href="javascript:void(0);"
+                  class="flex items-center gap-x-2 transition-all duration-300 ease-in-out hover:text-green-850"
                 >
                   <img
                     src="./assets/icons/register-icon.svg"
@@ -163,11 +171,12 @@
             </ul>
           </nav>
         </div>
-        <nav class="py-3 lg:py-4 px-8 rounded-2xl bg-thinkCellLightGray">
+        <!-- Main navigation -->
+        <nav class="py-3 lg:py-4 px-5 lg:px-8 rounded-2xl bg-neutral-150">
           <!-- Mobile Menu Toggle -->
           <button
             id="menuToggle"
-            class="lg:hidden p-2 text-thinkCellGreen rounded-lg focus:outline-none"
+            class="lg:hidden py-2 text-thinkCellGreen rounded-lg focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -184,65 +193,84 @@
               />
             </svg>
           </button>
+
           <ul
             role="menu"
-            class="hidden flex-col justify-end lg:flex md:flex-row items-center gap-x-6 lg:gap-x-8 mt-4 md:mt-0"
+            class="absolute left-0 right-0 px-5 lg:px-0 py-3 lg:py-0 z-20 lg:z-0 lg:relative bg-neutral-150 hidden flex-col justify-end lg:flex md:flex-row items-center gap-x-6 lg:gap-x-8"
             id="menu"
           >
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="#" role="menuitem">Produkt</a>
+              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+                >Produkt</a
+              >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="#" role="menuitem">Bestellen</a>
+              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+                >Bestellen</a
+              >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="#" role="menuitem">Download</a>
+              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+                >Download</a
+              >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="#" role="menuitem">Ressourcen</a>
+              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+                >Ressourcen</a
+              >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="#" role="menuitem">Karriere</a>
+              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+                >Karriere</a
+              >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="#" role="menuitem">Unternehmen</a>
+              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+                >Unternehmen</a
+              >
             </li>
             <li class="py-2 lg:py-0 ml-auto">
               <a
-                class="inline-flex font-medium text-lg leading-6 tracking-thinkCellLetterSpacing text-white py-3 px-4 rounded-lg bg-thinkCellGreen transition-opacity duration-300 ease-in-out hover:opacity-90"
-                href="#"
+                class="inline-flex font-medium text-lg leading-6 tracking-thinkCellLetterSpacing text-white py-3 px-4 rounded-lg bg-green-850 transition-opacity duration-300 ease-in-out hover:opacity-90"
+                href="javascript:void(0);"
                 role="menuitem"
                 >Jetzt kostenlos testen</a
               >
             </li>
           </ul>
         </nav>
+        <!-- end Main navigation -->
       </div>
     </header>
+    <!-- end Header -->
     <main>
       <div class="container">
+        <!-- Hero banner -->
         <section
-          class="hero-banner flex flex-col lg:flex-row items-center gap-y-8 lg:gap-x-6 px-5 lg:px-8 pt-0 pb-8 lg:py-14 bg-[url('/assets/video-background.png')] bg-no-repeat bg-bottom lg:bg-right bg-contain"
+          class="flex flex-col md:flex-row items-center gap-y-10 lg:gap-x-6 px-5 lg:px-8 pt-0 pb-8 lg:py-14 bg-[url('/assets/video-background.png')] bg-no-repeat bg-bottom md:bg-right bg-w60 lg:bg-contain"
         >
-          <div class="hero-content w-full lg:w-1/2">
+          <!-- Hero banner content -->
+          <div class="w-full lg:w-1/2">
             <h1
-              class="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-black mb-4"
+              class="text-2xl md:text-3xl lg:text-5xl font-medium leading-none lg:leading-tight text-black mb-4"
             >
               Powerpoint-Diagramme. Wie sie sein sollten.
             </h1>
             <p
-              class="text-base leading-6 md:text-lg md:leading-8 lg:text-2xl font-normal lg:leading-9 text-black tracking-thinkCellLetterSpacing mb-8"
+              class="text-base md:text-lg lg:text-2xl leading-6 md:leading-8 font-normal lg:leading-9 text-black tracking-thinkCellLetterSpacing mb-8"
             >
               Mit think-cell erstellen Sie beeindruckende Diagramme in wenigen
               Minuten, verbessern Ihr Folien-Layout und automatisieren Ihre
               regelmäßigen Berichte.
             </p>
             <a
-              href="#"
-              class="hero-cta-btn inline-flex text-base md:text-2xl lg:text-2xl font-medium text-white rounded-lg bg-thinkCellGreen py-3 lg:py-4 px-5 lg:px-8 transition-opacity duration-300 ease-in-out hover:opacity-90"
+              href="javascript:void(0);"
+              class="inline-flex text-base md:text-lg lg:text-2xl font-medium text-white rounded-lg bg-green-850 py-3 lg:py-4 px-5 lg:px-8 transition-opacity duration-300 ease-in-out hover:opacity-90"
               >Jetzt kostenlos testen</a
             >
           </div>
+          <!-- end Hero banner content -->
+          <!-- Hero banner video modal -->
           <div class="w-full lg:w-1/2">
             <div class="relative flex items-center justify-center">
               <img
@@ -261,15 +289,18 @@
                   src="assets/icons/play-button.svg"
                   alt="Play video button"
                   loading="lazy"
+                  class="w-20 lg:w-auto"
                 />
               </a>
             </div>
           </div>
+          <!-- end Hero banner video modal -->
         </section>
+        <!-- end Hero banner -->
       </div>
     </main>
 
-    <!-- Modal -->
+    <!-- Modal card -->
     <div
       id="videoModal"
       class="absolute top-0 left-0 right-0 bottom-0 px-6 lg:px-0 inset-0 z-50 bg-black bg-opacity-85 flex items-center justify-center opacity-0 invisible transition-all duration-300 ease"
@@ -277,20 +308,20 @@
       aria-modal="true"
     >
       <div
-        class="relative bg-white p-5 rounded-lg shadow-lg w-full lg:max-w-4xl"
+        class="relative bg-white p-2 lg:p-5 rounded-lg shadow-lg w-full lg:max-w-4xl"
       >
         <!-- Video -->
         <div class="relative overflow-hidden">
           <iframe
             src="https://www.youtube.com/embed/SX6vGFLghJo"
             title="YouTube video player"
-            class="w-full h-[400px] sm:h-[500px] rounded-lg"
+            class="w-full h-[250px] sm:h-[500px] rounded-lg"
             allowfullscreen
           ></iframe>
         </div>
         <!-- Close Button -->
         <button
-          class="absolute top-[-20px] right-[-20px] flex items-center justify-center p-3 w-12 h-12 rounded-full bg-thinkCellGreen text-white"
+          class="absolute top-[-20px] right-[-20px] flex items-center justify-center p-3 w-12 h-12 rounded-full bg-green-850 text-white"
           id="closeModalButton"
           aria-label="Close video"
         >
@@ -298,6 +329,8 @@
         </button>
       </div>
     </div>
+    <!-- end Modal card -->
+    <!-- Link to scripts file -->
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
