@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+@layer base {
+  body {
+    @apply font-jost;
+  }
+}
+::selection {
+  @apply bg-thinkCellGreen;
+}
+.nav-link {
+  @apply font-medium text-[20px] text-thinkCellDark leading-6 tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-thinkCellGreen;
+}
