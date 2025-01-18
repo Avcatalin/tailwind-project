@@ -31,7 +31,7 @@
           </a>
           <!-- Language / Search / Register -->
           <nav aria-label="Top utility navigation">
-            <ul class="flex items-center list-none gap-x-4 lg:gap-x-8">
+            <ul class="flex items-center list-none gap-x-4 md:gap-x-8">
               <!-- Language switcher -->
               <li class="relative group hover:text-green-850">
                 <!-- Dropdown Trigger -->
@@ -50,7 +50,7 @@
                   />
                   <div class="flex items-center">
                     <span
-                      class="hidden lg:block font-medium text-xl tracking-thinkCellLetterSpacing"
+                      class="hidden md:block font-medium text-xl tracking-thinkCellLetterSpacing"
                       id="currentLanguage"
                       >Deutsch</span
                     >
@@ -94,11 +94,11 @@
 
               <!-- Search trigger -->
               <li
-                class="relative before:content-[''] before:absolute before:-left-2 lg:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
+                class="relative before:content-[''] before:absolute before:-left-2 md:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
               >
                 <a
                   href="javascript:void(0);"
-                  class="flex items-center gap-x-0 lg:gap-x-2"
+                  class="flex items-center gap-x-0 md:gap-x-2"
                   aria-label="Search"
                   id="search-trigger"
                 >
@@ -108,11 +108,11 @@
                     loading="lazy"
                   />
                   <span
-                    class="hidden lg:block font-medium text-xl tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-green-850"
+                    class="hidden md:block font-medium text-xl tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-green-850"
                     >Suche</span
                   >
                   <span
-                    class="hidden lg:flex lg:items-center gap-x-0.5 p-1 bg-[#D2D6DC] rounded"
+                    class="hidden md:flex lg:items-center gap-x-0.5 p-1 bg-[#D2D6DC] rounded"
                   >
                     <img
                       src="./assets/icons/icon-command.svg"
@@ -125,7 +125,7 @@
                 <form
                   action="/search"
                   method="GET"
-                  class="absolute -top-1 right-0 w-32 transition-all duration-300 ease-in-out opacity-0 invisible"
+                  class="absolute -top-1 right-0 w-32 sm:w-44 md:w-60 transition-all duration-300 ease-in-out opacity-0 invisible"
                   id="search-form"
                 >
                   <!-- Search Input -->
@@ -150,7 +150,7 @@
 
               <!-- Register cta -->
               <li
-                class="relative before:content-[''] before:absolute before:-left-2 lg:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
+                class="relative before:content-[''] before:absolute before:-left-2 md:before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-5 before:bg-[#D2D6DC]"
               >
                 <a
                   href="javascript:void(0);"
@@ -163,7 +163,7 @@
                     loading="lazy"
                   />
                   <span
-                    class="hidden lg:block font-medium text-xl tracking-thinkCellLetterSpacing"
+                    class="hidden md:block font-medium text-xl tracking-thinkCellLetterSpacing"
                     >Anmelden</span
                   >
                 </a>
@@ -176,7 +176,7 @@
           <!-- Mobile Menu Toggle -->
           <button
             id="menuToggle"
-            class="lg:hidden py-2 text-thinkCellGreen rounded-lg focus:outline-none"
+            class="lg:hidden py-2 ml-[95%] text-green-850 rounded-lg focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +196,7 @@
 
           <ul
             role="menu"
-            class="absolute left-0 right-0 px-5 lg:px-0 py-3 lg:py-0 z-20 lg:z-0 lg:relative bg-neutral-150 hidden flex-col justify-end lg:flex md:flex-row items-center gap-x-6 lg:gap-x-8"
+            class="absolute left-0 right-0 px-5 lg:px-0 py-3 lg:py-0 z-20 lg:z-0 lg:relative text-right lg:text-left bg-neutral-150 hidden flex-col justify-end lg:flex md:flex-row items-center gap-x-6 lg:gap-x-8"
             id="menu"
           >
             <li class="py-2 lg:py-0">
@@ -247,7 +247,7 @@
       <div class="container">
         <!-- Hero banner -->
         <section
-          class="flex flex-col md:flex-row items-center gap-y-10 lg:gap-x-6 px-5 lg:px-8 pt-0 pb-8 lg:py-14 bg-[url('/assets/video-background.png')] bg-no-repeat bg-bottom md:bg-right bg-w60 lg:bg-contain"
+          class="flex flex-col md:flex-row items-center gap-y-10 lg:gap-x-6 px-5 lg:px-8 pt-0 pb-8 lg:py-14 bg-[url('/assets/video-background.png')] bg-no-repeat bg-bottom md:bg-right bg-contain lg:bg-w60 xl:bg-contain"
         >
           <!-- Hero banner content -->
           <div class="w-full lg:w-1/2">

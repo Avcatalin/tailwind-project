@@ -54,11 +54,11 @@ const languageSwitcher = document.getElementById("languageTrigger");
 
 // Function to show the form
 const showForm = () => {
-  languageSwitcher.classList.add("pr-24");
+  languageSwitcher.classList.add("pr-0", "sm:pr-36", "md:pr-24");
   languageDropdown.classList.remove("right-[-5px]");
   languageDropdown.classList.add("right-auto", "left-[-4px]");
-  searchForm.classList.remove("w-32", "opacity-0", "invisible");
-  searchForm.classList.add("w-[240px]", "opacity-100", "visible");
+  searchForm.classList.remove("opacity-0", "invisible");
+  searchForm.classList.add("opacity-100", "visible");
 
   // Delay focus until the form becomes fully visible
   setTimeout(() => {
@@ -68,9 +68,9 @@ const showForm = () => {
 
 // Function to hide the form
 const hideForm = () => {
-  languageSwitcher.classList.remove("pr-24");
-  searchForm.classList.remove("opacity-100", "w-[240px]", "visible");
-  searchForm.classList.add("w-32", "opacity-0", "invisible");
+  languageSwitcher.classList.remove("pr-0", "sm:pr-36", "md:pr-24");
+  searchForm.classList.remove("opacity-100", "visible");
+  searchForm.classList.add("opacity-0", "invisible");
 };
 
 // Show form when the search trigger is clicked
