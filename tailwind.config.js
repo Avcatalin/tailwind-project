@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./*.html", "./js/main.js"],
-  safelist: ["-top-5", "-right-5", "-ml-10", "-left-2", "-left-4"],
   theme: {
     container: {
       center: true,
