@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Think-cell</title>
+    <title>Think-cell Project</title>
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +31,7 @@
           </a>
           <!-- Language / Search / Register -->
           <nav aria-label="Top utility navigation">
-            <ul class="flex items-center list-none gap-x-4 md:gap-x-8">
+            <ul class="flex items-center gap-x-4 list-none md:gap-x-8">
               <!-- Language switcher -->
               <li class="relative group hover:text-green-850">
                 <!-- Dropdown Trigger -->
@@ -50,7 +50,7 @@
                   />
                   <div class="flex items-center">
                     <span
-                      class="hidden md:block font-medium text-xl tracking-thinkCellLetterSpacing"
+                      class="hidden md:block font-medium text-lg xl:text-xl tracking-small"
                       id="currentLanguage"
                       >Deutsch</span
                     >
@@ -108,7 +108,7 @@
                     loading="lazy"
                   />
                   <span
-                    class="hidden md:block font-medium text-xl tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-green-850"
+                    class="hidden md:block font-medium text-lg xl:text-xl tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
                     >Suche</span
                   >
                   <span
@@ -163,7 +163,7 @@
                     loading="lazy"
                   />
                   <span
-                    class="hidden md:block font-medium text-xl tracking-thinkCellLetterSpacing"
+                    class="hidden md:block font-medium text-lg xl:text-xl tracking-small"
                     >Anmelden</span
                   >
                 </a>
@@ -172,11 +172,13 @@
           </nav>
         </div>
         <!-- Main navigation -->
-        <nav class="py-3 lg:py-4 px-5 lg:px-8 rounded-2xl bg-neutral-150">
+        <nav
+          class="py-2 md:py-3 lg:py-4 px-5 lg:px-8 rounded-none lg:rounded-2xl bg-neutral-150"
+        >
           <!-- Mobile Menu Toggle -->
           <button
             id="menuToggle"
-            class="lg:hidden py-2 ml-[95%] text-green-850 rounded-lg focus:outline-none"
+            class="flex ml-auto lg:hidden py-2 text-green-850 rounded-lg focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -200,38 +202,56 @@
             id="menu"
           >
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
                 >Produkt</a
               >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
                 >Bestellen</a
               >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
                 >Download</a
               >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
                 >Ressourcen</a
               >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
                 >Karriere</a
               >
             </li>
             <li class="py-2 lg:py-0">
-              <a class="nav-link" href="javascript:void(0);" role="menuitem"
+              <a
+                class="font-medium text-lg xl:text-xl text-slate-1000 leading-6 tracking-small transition-all duration-300 ease-in-out hover:text-green-850"
+                href="javascript:void(0);"
+                role="menuitem"
                 >Unternehmen</a
               >
             </li>
             <li class="py-2 lg:py-0 ml-auto">
               <a
-                class="inline-flex font-medium text-lg leading-6 tracking-thinkCellLetterSpacing text-white py-3 px-4 rounded-lg bg-green-850 transition-opacity duration-300 ease-in-out hover:opacity-90"
+                class="inline-flex font-medium text-lg leading-6 tracking-small text-white py-3 px-4 rounded-lg bg-green-850 transition-opacity duration-300 ease-in-out hover:opacity-90"
                 href="javascript:void(0);"
                 role="menuitem"
                 >Jetzt kostenlos testen</a
@@ -252,12 +272,12 @@
           <!-- Hero banner content -->
           <div class="w-full lg:w-1/2">
             <h1
-              class="text-2xl md:text-3xl lg:text-5xl font-medium leading-none lg:leading-tight text-black mb-4"
+              class="mb-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-none xl:leading-tight text-black"
             >
               Powerpoint-Diagramme. Wie sie sein sollten.
             </h1>
             <p
-              class="text-base md:text-lg lg:text-2xl leading-6 md:leading-8 font-normal lg:leading-9 text-black tracking-thinkCellLetterSpacing mb-8"
+              class="mb-4 lg:mb-6 xl:mb-8 text-base md:text-lg lg:text-xl xl:text-2xl font-normal leading-6 lg:leading-8 xl:leading-9 text-black tracking-small"
             >
               Mit think-cell erstellen Sie beeindruckende Diagramme in wenigen
               Minuten, verbessern Ihr Folien-Layout und automatisieren Ihre
@@ -265,7 +285,7 @@
             </p>
             <a
               href="javascript:void(0);"
-              class="inline-flex text-base md:text-lg lg:text-2xl font-medium text-white rounded-lg bg-green-850 py-3 lg:py-4 px-5 lg:px-8 transition-opacity duration-300 ease-in-out hover:opacity-90"
+              class="inline-flex py-3 lg:py-4 px-5 lg:px-8 text-base md:text-lg lg:text-2xl font-medium text-white rounded-lg bg-green-850 transition-opacity duration-300 ease-in-out hover:opacity-90"
               >Jetzt kostenlos testen</a
             >
           </div>
@@ -276,14 +296,14 @@
               <img
                 src="/assets/app-screen-hero-banner.png"
                 alt="Think-Cell application screen showing diagrams"
-                class="mr-0 lg:mr-[-40px]"
+                class="mr-0 lg:-mr-10"
                 loading="lazy"
               />
               <a
                 href="#"
                 id="videoButton"
                 aria-label="Play video"
-                class="absolute inset-x-auto ml-0 lg:ml-[40px] inset-y-auto z-10"
+                class="absolute inset-auto ml-0 lg:-ml-10 z-10"
               >
                 <img
                   src="assets/icons/play-button.svg"
@@ -303,25 +323,25 @@
     <!-- Modal card -->
     <div
       id="videoModal"
-      class="absolute top-0 left-0 right-0 bottom-0 px-6 lg:px-0 inset-0 z-50 bg-black bg-opacity-85 flex items-center justify-center opacity-0 invisible transition-all duration-300 ease"
+      class="flex items-center justify-center absolute top-0 left-0 right-0 bottom-0 px-6 lg:px-0 inset-0 z-50 bg-black bg-opacity-85 opacity-0 invisible transition-all duration-300 ease"
       role="dialog"
       aria-modal="true"
     >
       <div
-        class="relative bg-white p-2 lg:p-5 rounded-lg shadow-lg w-full lg:max-w-4xl"
+        class="relative w-full lg:max-w-4xl p-2 lg:p-5 bg-white rounded-lg shadow-lg"
       >
         <!-- Video -->
         <div class="relative overflow-hidden">
           <iframe
             src="https://www.youtube.com/embed/SX6vGFLghJo"
             title="YouTube video player"
-            class="w-full h-[250px] sm:h-[500px] rounded-lg"
+            class="w-full h-64 sm:h-96 rounded-lg"
             allowfullscreen
           ></iframe>
         </div>
         <!-- Close Button -->
         <button
-          class="absolute top-[-20px] right-[-20px] flex items-center justify-center p-3 w-12 h-12 rounded-full bg-green-850 text-white"
+          class="flex items-center justify-center absolute -top-5 -right-5 p-3 w-12 h-12 rounded-full bg-green-850 text-white"
           id="closeModalButton"
           aria-label="Close video"
         >
@@ -331,6 +351,6 @@
     </div>
     <!-- end Modal card -->
     <!-- Link to scripts file -->
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

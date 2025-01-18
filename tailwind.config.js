@@ -28,7 +28,7 @@ module.exports = {
         },
       },
       letterSpacing: {
-        thinkCellLetterSpacing: "0.16px",
+        small: "0.16px",
       },
       backgroundSize: {
         w60: "60%",

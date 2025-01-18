@@ -11,6 +11,3 @@
 ::selection {
   @apply bg-green-850;
 }
-.nav-link {
-  @apply font-medium text-lg lg:text-xl text-slate-1000 leading-6 tracking-thinkCellLetterSpacing transition-all duration-300 ease-in-out hover:text-green-850;
-}
