@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Utility function to add or remove multiple classes
   const toggleClasses = (element, classesToAdd, classesToRemove) => {
     element.classList.remove(...classesToRemove);
     element.classList.add(...classesToAdd);
   };
-  
+
   // Modal functionality to show/hide and stop video if user clicks outside or closes the video
   const videoButton = document.getElementById("videoButton");
   const videoModal = document.getElementById("videoModal");
@@ -17,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ["opacity-100", "visible"],
       ["opacity-0", "invisible"]
     );
-
   });
 
   // Function to stop the video and hide the modal
@@ -134,4 +134,4 @@ document.addEventListener("DOMContentLoaded", function () {
   menuToggle.addEventListener("click", () => {
     menu.classList.toggle("hidden"); // Show or hide the menu
   });
-})
+});

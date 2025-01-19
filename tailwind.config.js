@@ -5,9 +5,6 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        sm: "100%", // Full width for small screens
-        md: "100%", // Full width for medium screens
-        lg: "1024px", // Large screens
         xl: "1264px", // Extra large screens
         "2xl": "1264px", // Keep the same for larger screens
       },
